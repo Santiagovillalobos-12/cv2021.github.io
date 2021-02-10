@@ -1,0 +1,27 @@
+.about {
+    padding: 40px 50px;
+
+    .col50 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .about-left {
+            img {
+                max-width: 220px;
+                padding: 2px;
+                border: solid 3px $primary-color;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+            img:hover {
+                transform: scale(1.10);
+                filter: blur(0);
+            }
+        }
+        .about-rigth {
+            padding: 50px 0px;
+            border-top: solid $secundary-color;
+            border-bottom: solid $secundary-color;
+        }
+    }
+}

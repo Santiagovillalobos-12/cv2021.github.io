@@ -1,0 +1,14 @@
+{
+  "name": "hoja-de-vida",
+  "version": "1.0.0",
+  "description": "Hoja de vida Santiago Villalobos",
+  "main": "index.js",
+  "scripts": {
+    "watch-scss": "sass --watch scss/app.scss:css/app.css --no-source-map"
+  },
+  "author": "Santiago Villalobos",
+  "license": "ISC",
+  "dependencies": {
+    "css-minify": "^1.1.0"
+  }
+}
