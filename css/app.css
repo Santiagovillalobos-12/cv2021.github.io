@@ -83,6 +83,7 @@
   }
   .place p span {
     left: 10px;
+    top: 0;
   }
 }
 @media (max-width: 480px) {
