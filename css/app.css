@@ -216,6 +216,9 @@ header li span:hover::after {
   border-top: solid #039BE5;
   border-bottom: solid #039BE5;
 }
+.about .col50 .about-rigth p {
+  font-style: italic;
+}
 
 @media (max-width: 480px) {
   .about {
