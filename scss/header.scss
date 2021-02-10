@@ -45,9 +45,9 @@ header {
             transform-origin: bottom;
         }
         span:hover::before {
-            transform: rotateX(0deg)  translateY(0px);
+            transform: rotateX(0deg) translateY(0px);
         }
-        span::after{
+        span::after {
             content: attr(title);
             position: absolute;
             top: 0;
@@ -60,8 +60,30 @@ header {
             transform: rotateX(0deg) translateY(0px);
             transform-origin: top;
         }
-        span:hover::after{
+        span:hover::after {
             transform: rotateX(90deg) translateY(-10px);
+        }
+    }
+}
+@include tablet {
+    header {
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+ /*            flex-direction: column; */
+            align-items: center;
+            justify-content: space-around;
+
+            li {
+                padding: 8px 15px;
+            }
+        }
+    }
+}
+@include movil{
+    header{
+        .navigation{
+            line-height: 10px;
         }
     }
 }

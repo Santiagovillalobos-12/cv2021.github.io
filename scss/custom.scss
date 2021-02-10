@@ -33,6 +33,11 @@
  
 
 }
+@include movil{
+    .titleText{
+        font-size: 1.2em;
+    }
+}
 .titleText:hover{
     transform: skewY(0deg) scale(1.1);
     filter: blur(0);
@@ -72,5 +77,21 @@
             color: #fff;
             letter-spacing: 1px;
         }
+    }
+}
+@include movil{
+    .place{
+        p{
+            font-size: 1.1em;
+            span{
+                left: 10px;
+            }
+        }
+    }
+}
+
+@include movil{
+    header,.skills,.educacion,.experiencia{
+        padding: 40px 20px !important;
     }
 }

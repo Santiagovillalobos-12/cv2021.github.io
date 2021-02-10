@@ -14,7 +14,7 @@
                 transition: 0.5s;
             }
             img:hover {
-                transform: scale(1.10);
+                transform: scale(1.1);
                 filter: blur(0);
             }
         }
@@ -22,6 +22,23 @@
             padding: 50px 0px;
             border-top: solid $secundary-color;
             border-bottom: solid $secundary-color;
+        }
+    }
+}
+@include movil {
+    .about {
+        padding: 40px 20px;
+        .row {
+            flex-direction: column;
+            align-items: center;
+            .col50{
+                width: 100%;
+                .about-rigth{
+                    padding: 30px 0px;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
         }
     }
 }
