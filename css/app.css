@@ -168,10 +168,27 @@ header li span:hover::after {
   header .navigation li {
     padding: 8px 15px;
   }
+  header .navigation li a {
+    text-align: center;
+  }
+  header .navigation li a span {
+    text-align: center;
+  }
 }
 @media (max-width: 480px) {
   header .navigation {
     line-height: 10px;
+    display: block;
+    column-count: 2;
+  }
+  header .navigation li {
+    text-align: center;
+  }
+  header .navigation li a {
+    text-align: center;
+  }
+  header .navigation li a span {
+    text-align: center;
   }
 }
 .about {
