@@ -16,6 +16,10 @@
     font-weight: 700;
     font-size: 1.5em;
 } */
+.d-none {
+  display: none;
+}
+
 .titleText {
   position: relative;
   margin-bottom: 40px;
@@ -87,8 +91,106 @@
   }
 }
 @media (max-width: 480px) {
-  header, .skills, .educacion, .experiencia {
+  header,
+.skills,
+.educacion,
+.experiencia {
     padding: 40px 20px !important;
+  }
+}
+.toggle {
+  position: fixed;
+  top: 40px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  background: #fff url(/images/menu.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 100000;
+  display: none;
+}
+
+.toggle.active {
+  background: #fff url(/images/close.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-movil {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  z-index: 15;
+}
+.navigation-movil span {
+  position: absolute;
+  top: -100%;
+  left: calc(25% * var(--i));
+  width: 25%;
+  height: 100%;
+  background: #039BE5;
+  transition: 0.25s;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  transition-delay: calc(0.25s * var(--i));
+}
+.navigation-movil ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  transform: translateX(-100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.navigation-movil ul li {
+  list-style: none;
+}
+.navigation-movil ul li a {
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 20px;
+}
+.navigation-movil ul li a:hover {
+  background: #fff;
+  color: #039BE5;
+}
+
+.navigation-movil.active {
+  visibility: visible;
+}
+.navigation-movil.active span {
+  top: 0;
+}
+.navigation-movil.active ul {
+  transform: translateX(0px);
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.75s;
+}
+
+.containerBx {
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  .toggle {
+    display: initial;
   }
 }
 header {
@@ -160,7 +262,8 @@ header li span:hover::after {
 
 @media (max-width: 767px) {
   header .navigation {
-    display: flex;
+    display: none;
+    /* display: flex; */
     flex-wrap: wrap;
     /*            flex-direction: column; */
     align-items: center;
@@ -179,7 +282,7 @@ header li span:hover::after {
 @media (max-width: 480px) {
   header .navigation {
     line-height: 10px;
-    display: block;
+    display: none;
     column-count: 2;
   }
   header .navigation li {

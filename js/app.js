@@ -1,25 +1,46 @@
-/* function stickyHeader() {
+function toggleMenu() {
     try {
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            header.classList.toggle("sticky", window.scrollY > 0);
-        });
+        const toggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation-movil');
+        const links = document.querySelectorAll('.navigation li a');
+        const linksMovil = document.querySelectorAll('.navigation-movil li a');
+ 
+
+
+        function active() {
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        toggle.addEventListener('click', active);
+        links.forEach(i => {
+            i.addEventListener('click', active);
+        })
+        linksMovil.forEach(i => {
+            i.addEventListener('click', active);
+        })
+        
+
     } catch (error) {
         console.log(`error`, error);
     }
 }
+/* 
+function containerBx() {
 
-function toggleMenu() {
-    const menuToggle = document.querySelector('.menuToggle');
-    const navigation = document.querySelector('.navigation');
+    try {
+        const container = document.querySelector('.containerBx');
+        const toggle = document.querySelector('.active');
 
-    function open() {
-        menuToggle.classList.toggle('active');
-        navigation.classList.toggle('active');
+        if(toggle){
+            container.classList.add('d-none');
+        }
+
+    } catch (error) {
+        console.log(`error`, error);
     }
-    menuToggle.addEventListener("click",open);
-    navigation.addEventListener("click",open);
-}
+} */
+toggleMenu();
+/* containerBx(); */
 
-stickyHeader();
-toggleMenu(); */
+
+

@@ -18,6 +18,10 @@
     font-size: 1.5em;
 } */
 
+.d-none {
+    display: none;
+}
+
 .titleText {
     position: relative;
     margin-bottom: 40px;
@@ -30,19 +34,16 @@
     transition: 0.3s;
     background: $secundary-color;
     transform: skewY(-5deg);
- 
-
 }
-@include movil{
-    .titleText{
+@include movil {
+    .titleText {
         font-size: 1.2em;
     }
 }
-.titleText:hover{
+.titleText:hover {
     transform: skewY(0deg) scale(1.1);
     filter: blur(0);
 }
-
 
 .row {
     position: relative;
@@ -57,16 +58,15 @@
 .place {
     display: flex;
     align-items: center;
-    img{
+    img {
         position: relative;
-        
     }
     p {
         font-size: 1.3em;
         position: relative;
         left: 10px;
         font-weight: 500;
-        span{
+        span {
             position: relative;
             left: 20px;
             top: -2px;
@@ -79,11 +79,11 @@
         }
     }
 }
-@include movil{
-    .place{
-        p{
+@include movil {
+    .place {
+        p {
             font-size: 1.1em;
-            span{
+            span {
                 left: 10px;
                 top: 2px;
             }
@@ -91,8 +91,104 @@
     }
 }
 
-@include movil{
-    header,.skills,.educacion,.experiencia{
+@include movil {
+    header,
+    .skills,
+    .educacion,
+    .experiencia {
         padding: 40px 20px !important;
+    }
+}
+
+.toggle {
+    position: fixed;
+    top: 40px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: #fff url(/images/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 100000;
+    display: none;
+}
+.toggle.active {
+    background: #fff url(/images/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.navigation-movil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 15;
+    span {
+        position: absolute;
+        top: -100%;
+        left: calc(25% * var(--i));
+        width: 25%;
+        height: 100%;
+        background: $secundary-color;
+        transition: 0.25s;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        transition-delay: calc(0.25s * var(--i));
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 2;
+        transform: translateX(-100px);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        transition-delay: 0s;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                font-size: 3em;
+                font-weight: 700;
+                color: #fff;
+                display: inline-block;
+                padding: 5px 20px;
+            }
+            a:hover {
+                background: #fff;
+                color: $secundary-color;
+            }
+        }
+    }
+}
+.navigation-movil.active {
+    visibility: visible;
+    span {
+        top: 0;
+    }
+    ul {
+        transform: translateX(0px);
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.75s;
+    }
+}
+
+.containerBx {
+    z-index: 10;
+}
+
+@include tablet{
+    .toggle{
+        display: initial;
     }
 }
