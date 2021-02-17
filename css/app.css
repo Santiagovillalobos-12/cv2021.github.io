@@ -195,7 +195,7 @@
 }
 @media (max-width: 480px) {
   .toggle {
-    /* top: 10; */
+    display: none;
   }
 }
 header {

@@ -42,18 +42,15 @@ function containerBx() {
 
 function positionToggleResponsive() {
     try {
-
-        window.addEventListener('scroll', function () {
-            const toggle = document.querySelector('.toggle');
-
-            if (window.scrollY <= 0) {
-                toggle.setAttribute('style', 'display:none',);
-            }
-            else 
-                toggle.setAttribute('style', 'top: 40px');
-            }
-        )
-    }
+        
+            window.addEventListener('scroll', function(){
+                const toggle = document.querySelector('.toggle');
+                toggle.setAttribute('style', 'display: initial', window.scrollY >= 0);
+                if(window.scrollY ==0){
+                    toggle.setAttribute('style','display: none');
+                }
+            })
+        }
     catch (error) {
         console.log(`error`, error);
     }
