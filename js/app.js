@@ -4,7 +4,7 @@ function toggleMenu() {
         const navigation = document.querySelector('.navigation-movil');
         const links = document.querySelectorAll('.navigation li a');
         const linksMovil = document.querySelectorAll('.navigation-movil li a');
- 
+
 
 
         function active() {
@@ -18,7 +18,7 @@ function toggleMenu() {
         linksMovil.forEach(i => {
             i.addEventListener('click', active);
         })
-        
+
 
     } catch (error) {
         console.log(`error`, error);
@@ -39,8 +39,28 @@ function containerBx() {
         console.log(`error`, error);
     }
 } */
+
+function positionToggleResponsive() {
+    try {
+
+        window.addEventListener('scroll', function () {
+            const toggle = document.querySelector('.toggle');
+
+            if (window.scrollY <= 0) {
+                toggle.setAttribute('style', 'top: 95px',);
+            }
+            else 
+                toggle.setAttribute('style', 'top: 40px');
+            }
+        )
+    }
+    catch (error) {
+        console.log(`error`, error);
+    }
+}
 toggleMenu();
 /* containerBx(); */
+positionToggleResponsive();
 
 
 

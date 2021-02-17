@@ -193,6 +193,11 @@
     display: initial;
   }
 }
+@media (max-width: 480px) {
+  .toggle {
+    /* top: 10; */
+  }
+}
 header {
   padding: 40px 50px;
   background: #f5f5f5;
