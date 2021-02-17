@@ -47,7 +47,7 @@ function positionToggleResponsive() {
             const toggle = document.querySelector('.toggle');
 
             if (window.scrollY <= 0) {
-                toggle.setAttribute('style', 'top: 95px',);
+                toggle.setAttribute('style', 'display:none',);
             }
             else 
                 toggle.setAttribute('style', 'top: 40px');
