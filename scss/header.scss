@@ -5,6 +5,9 @@ header {
         font-size: 2.5em;
         color: $primary-color;
     }
+    p {
+        font-size: 20px;
+    }
     .navigation {
         display: flex;
         justify-content: space-around;
@@ -19,7 +22,6 @@ header {
         padding: 10px 15px;
         transform-style: preserve-3d;
         transition: 0.5s;
-
         a {
             color: #fff;
             text-decoration: none;
@@ -65,6 +67,7 @@ header {
         }
     }
 }
+
 @include tablet {
     header {
         .navigation {
@@ -74,7 +77,6 @@ header {
             /*flex-direction: column; */
             align-items: center;
             justify-content: space-around;
-
             li {
                 padding: 8px 15px;
                 a {
@@ -87,17 +89,18 @@ header {
         }
     }
 }
+
 @include movil {
     header {
         .navigation {
             line-height: 10px;
             display: none;
             column-count: 2;
-            li{
+            li {
                 text-align: center;
-                a{
+                a {
                     text-align: center;
-                    span{
+                    span {
                         text-align: center;
                     }
                 }

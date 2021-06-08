@@ -206,6 +206,9 @@ header h2 {
   font-size: 2.5em;
   color: #350048;
 }
+header p {
+  font-size: 20px;
+}
 header .navigation {
   display: flex;
   justify-content: space-around;
@@ -325,6 +328,7 @@ header li span:hover::after {
   border-bottom: solid #039BE5;
 }
 .about .col50 .about-rigth p {
+  font-size: 24px;
   font-style: italic;
 }
 
