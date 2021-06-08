@@ -1,6 +1,11 @@
 .contacto {
     padding: 40px 50px;
     background: #f5f5f5;
+    .content {
+        p {
+            font-size: 24px;
+        }
+    }
 }
 
 .place {

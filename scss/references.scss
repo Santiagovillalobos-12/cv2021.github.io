@@ -3,6 +3,7 @@
     background: $primary-color;
     .place {
         p {
+            font-size: 32px;
             color: #fff;
             span {
                 background: $secundary-color;
@@ -21,7 +22,7 @@
         align-items: center;
         p {
             color: #fff;
-            font-size: 16px;
+            font-size: 24px;
             width: 90%;
             margin: auto;
             transition: 0.2s;

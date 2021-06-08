@@ -1,32 +1,31 @@
 .experiencia {
     padding: 40px 50px;
-
-
-    .content{
+    .content {
         position: relative;
         top: 40px;
         padding: 30px 0px;
         border-top: solid 3px $secundary-color;
         border-bottom: solid 3px $secundary-color;
         margin-bottom: 90px;
-        p{
-            font-size: 16px;
+        p {
+            font-size: 24px;
             width: 90%;
             margin: auto;
             transition: 0.2s;
         }
     }
-    .content:hover{
+    .content:hover {
         border-color: $primary-color;
-        p{
+        p {
             transform: scale(1.03);
             filter: blur(0);
         }
     }
 }
-@include movil{
-    .experiencia{
-        .content{
+
+@include movil {
+    .experiencia {
+        .content {
             text-align: center;
         }
     }

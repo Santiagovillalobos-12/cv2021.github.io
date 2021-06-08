@@ -499,7 +499,7 @@ header li span:hover::after {
   margin-bottom: 90px;
 }
 .experiencia .content p {
-  font-size: 16px;
+  font-size: 24px;
   width: 90%;
   margin: auto;
   transition: 0.2s;
@@ -537,7 +537,7 @@ header li span:hover::after {
 }
 .educacion .content p {
   color: #fff;
-  font-size: 16px;
+  font-size: 22px;
   width: 90%;
   margin: auto;
   transition: 0.2s;
@@ -559,6 +559,9 @@ header li span:hover::after {
   padding: 40px 50px;
   background: #f5f5f5;
 }
+.contacto .content p {
+  font-size: 24px;
+}
 
 .place {
   margin-bottom: 10px;
@@ -569,6 +572,7 @@ header li span:hover::after {
   background: #350048;
 }
 .references .place p {
+  font-size: 32px;
   color: #fff;
 }
 .references .place p span {
@@ -587,7 +591,7 @@ header li span:hover::after {
 }
 .references .content p {
   color: #fff;
-  font-size: 16px;
+  font-size: 24px;
   width: 90%;
   margin: auto;
   transition: 0.2s;
