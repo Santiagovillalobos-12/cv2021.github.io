@@ -12,6 +12,7 @@ function toggleMenu() {
         linksMovil.forEach(i => {
             i.addEventListener('click', active);
         })
+        
 
     } catch (error) {
         console.log(`error`, error);
@@ -34,7 +35,7 @@ function containerBx() {
     }
 } */
 
-function positionToggleResponsive() {
+function positionToggleResponsive() { 
     try {
         window.addEventListener('scroll', function () {
             const toggle = document.querySelector('.toggle');

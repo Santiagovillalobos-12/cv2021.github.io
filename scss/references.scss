@@ -1,0 +1,43 @@
+.references {
+    padding: 40px 50px;
+    background: $primary-color;
+    .place {
+        p {
+            color: #fff;
+            span {
+                background: $secundary-color;
+            }
+        }
+    }
+    .content {
+        position: relative;
+        top: 40px;
+        padding: 30px 0px;
+        border-top: solid 3px #fff;
+        border-bottom: solid 3px #fff;
+        margin-bottom: 90px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        p {
+            color: #fff;
+            font-size: 16px;
+            width: 90%;
+            margin: auto;
+            transition: 0.2s;
+        }
+        img {
+            position: absolute;
+        }
+    }
+    .content:hover {
+        border-color: $secundary-color;
+        p {
+            transform: scale(1.03);
+            filter: blur(0);
+        }
+    }
+    p {
+        color: #fff;
+    }
+}
